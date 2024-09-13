@@ -1,0 +1,113 @@
+:root{
+    --dark--100: rgba(14, 14, 14, 100%);
+    --dark--80: rgba(14, 14, 14, 80%);
+    --dark--50: rgba(14, 14, 14, 50%);
+    --dark--40: rgba(14, 14, 14, 40%);
+    --dark--20: rgba(14, 14, 14, 20%);
+    --dark--10: rgba(14, 14, 14, 10%);
+
+    --white--100: rgba(241, 241, 241, 100%);
+    --white--60: rgba(241, 241, 241, 60%);
+    --white--20: rgba(241, 241, 241, 20%);
+    --white--10: rgba(241, 241, 241, 10%);
+
+    --skyblue--100: rgb(8, 175, 207, 100%);
+    --skyblue--50: rgb(8, 175, 207, 50%);
+
+    --green--100: rgb(164, 202, 58, 100%);
+    --green--10: rgb(164, 202, 58, 10%);
+
+    --brown--100: rgb(198, 172, 139, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 4rem;
+    margin-bottom: 12px;
+}
+a,h1,h2,h3,h4, h1 span{
+    font-family: 'Montserrat';
+}
+p, span, strong{
+    font-family: 'roboto';
+}
+a{
+    font-size: 2rem;
+    color: var(--dark--100);
+}
+header{
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark--10);
+    border-bottom: 12px solid var(--skyblue--100);
+}
+header div.contenedorLogo{
+    padding: 0 24px;
+}
+header a img{
+    width: 64px;
+}
+header nav{
+    height: 100%;
+    display: flex;
+    gap: 32px;
+}
+header nav a{
+    height: 100%;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 12px;
+    transition: transform .1s ease-out;
+}
+header nav a:hover{
+    background-color: var(--dark--10);
+    transform: translateY(2px);
+}
+header nav a img{
+    width: 32px;
+}
+main section.presentacion{
+    max-height: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    background-color: var(--white--100);
+    box-shadow: 4px 0px 24px var(--skyblue--100);
+    overflow: hidden;
+}
+main section.presentacion div.presentacion__texto h1 span{
+    padding:  0 12px;
+    font-size: 4rem;
+    background-color: var(--skyblue--50);
+}
+main section.presentacion div.presentacion__texto p,
+main section.presentacion div.presentacion__texto p strong{
+    max-width: 500px;
+    font-size: 1.3rem;
+}
+main section.presentacion picture{
+    position: relative;
+    left: 24px;
+    width: 1000px;
+    display: flex;
+    background-color: var(--bronw--40);
+    overflow: hidden;
+}
+main section.presentacion picture img{
+    width: 100%;
+}
