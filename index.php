@@ -1,3 +1,5 @@
+<!-- Mejorar los tamaños de las cosas, verificar el tamaño de las imagenes -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
