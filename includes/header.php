@@ -1,21 +1,30 @@
+<?php 
+    require_once "./clases/Secciones.php";
+    require_once "./clases/Funciones.php";
+    $seccionesVisibles = Secciones::seccionesVisibles();
+
+?> 
+
 <header>
-    <div class="contenedorLogo">
-        <a class="logo" href="">
-            <img src="./img/logo_1.png" alt="Logo Leonardo Nahuel Dillon Jeannoteguy">
-        </a>
-    </div>
     <div>
+        <picture class="contenedorLogo">
+            <img src="./img/logo.png" alt="Logo de Leonardo Dillon">
+        </picture>
         <nav>
-            <a href="">
-                Productos
-            </a>
-            <a href="">
-                Contacto
-            </a>
-            <a href="">
-                Carrito
-                <img src="./img/carrito.png" alt="Icono de carrito de compras">
-            </a>
+            <?php
+                foreach($seccionesVisibles as $value){
+                    $valueSeccion = $value -> getSeccion();
+                    $valueTitulo = $value -> getTitulo();
+            ?>
+                <a 
+                    class="<?= ($seccionActual === $valueSeccion) ? 'active' : ''?>" 
+                    href="?sec=<?= $valueSeccion ?>"
+                    >
+                        <?= $valueTitulo ?>
+                </a>
+            <?php 
+                }   
+            ?>
         </nav>
     </div>
 </header>

@@ -1,0 +1,32 @@
+[
+    {
+        "seccion": "inicio",
+        "texto": "Inicio",
+        "titulo": "Inicio",
+        "visible": true
+    },
+    {
+        "seccion": "productos",
+        "texto": "Productos",
+        "titulo": "Productos",
+        "visible": true
+    },
+    {
+        "seccion": "contacto",
+        "texto": "Contacto",
+        "titulo": "Contacto",
+        "visible": true
+    },
+    {
+        "seccion": "carrito",
+        "texto": "Carrito",
+        "titulo": "Carrito",
+        "visible": true
+    },
+    {
+        "seccion": "404",
+        "texto": "404",
+        "titulo": "404",
+        "visible": false
+    }
+]

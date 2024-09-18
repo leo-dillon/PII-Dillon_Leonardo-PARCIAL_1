@@ -1,0 +1,4 @@
+1) -------------------------------------
+Se puede crear clases que no contengan todos los atributos ????
+Es recomendado | No es recomendado | Depende del uso
+-------------------------------------
