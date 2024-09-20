@@ -28,8 +28,9 @@
             require_once "./vistas/$seccionActual.php";
         ?>
     </main>
-    <footer>
-        
-    </footer>
+    <?php  
+        require_once './includes/footer.php'
+    ?>
+    
 </body>
 </html>
