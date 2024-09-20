@@ -1,4 +1,4 @@
-<form action="productos.php" method="GET">
+<form action="?sec=productos" method="POST">
     <h2>Filtrado por:</h2>
         <label for="cat">Categoría:</label>
         <select name="cat" id="cat">
