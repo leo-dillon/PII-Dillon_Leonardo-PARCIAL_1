@@ -5,19 +5,17 @@
     --dark--40: rgba(14, 14, 14, 40%);
     --dark--20: rgba(14, 14, 14, 20%);
     --dark--10: rgba(14, 14, 14, 10%);
+    --dark--5: rgba(14, 14, 14, 5%);
 
     --white--100: rgba(241, 241, 241, 100%);
     --white--60: rgba(241, 241, 241, 60%);
     --white--20: rgba(241, 241, 241, 20%);
     --white--10: rgba(241, 241, 241, 10%);
 
-    --skyblue--100: rgb(8, 175, 207, 100%);
-    --skyblue--50: rgb(8, 175, 207, 50%);
-
-    --green--100: rgb(164, 202, 58, 100%);
-    --green--10: rgb(164, 202, 58, 10%);
-
-    --brown--100: rgb(198, 172, 139, 100%);
+    --skyblue--100: rgb(26, 217, 255);
+    --lumber--100: rgb(255, 200, 180);
+    --lumber--80: rgb(255, 223, 211, 80%);
+    
 }
 *{
     padding: 0;
@@ -28,12 +26,17 @@
     box-sizing: border-box;
     color: var(--dark--100);
 }
-a{
+a, h2{
     font-size: 1.3rem;
     font-family: 'Montserrat';
 }
+body{
+    background-color: var(--dark--5);
+    min-height: 100vh;
+}
 header{
     background-color: var(--dark--10);
+    padding: 0 24px;
 }
 header>div{
     width: 100%;
@@ -44,11 +47,16 @@ header>div{
     justify-content: space-between;
     align-items: center;
 }
-header div picture.contenedorLogo{
-    display: inline-block;
+header div div.contenedorLogo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+header div div.contenedorLogo picture{
+    display: block;
     width: 42px;
 }
-header div picture.contenedorLogo img{
+header div div.contenedorLogo picture img{
     width: 100%;
 }
 header div nav{

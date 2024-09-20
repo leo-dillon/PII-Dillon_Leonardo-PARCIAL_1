@@ -7,9 +7,12 @@
 
 <header>
     <div>
-        <picture class="contenedorLogo">
-            <img src="./img/logo.png" alt="Logo de Leonardo Dillon">
-        </picture>
+        <div class="contenedorLogo">
+            <picture>
+                <img src="./img/logo.png" alt="Logo de Leonardo Dillon">
+            </picture>
+            <h2>Luce Delicate</h2>
+        </div>
         <nav>
             <?php
                 foreach($seccionesVisibles as $value){
