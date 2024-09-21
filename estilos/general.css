@@ -127,3 +127,11 @@ footer a:hover{
         transform: translateX(0);
     }
 }
+@keyframes arrAba{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(24px);
+    }
+}

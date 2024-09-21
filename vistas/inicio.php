@@ -32,3 +32,4 @@
         <?php }?>
     </div>
 </section>
+<script src="./js/efectos.js"></script>

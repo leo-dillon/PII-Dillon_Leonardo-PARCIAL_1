@@ -30,6 +30,7 @@ section.cartelera .publicidad div.izquierda h1{
     letter-spacing: 3px;
     text-align: center;
     text-transform: uppercase;
+    font-style: italic;
     font-weight: 600;
     text-shadow: 3px 3px 6px var(--white--100);
     z-index: 2;
@@ -45,7 +46,7 @@ section.cartelera .publicidad div.izquierda h1::before{
     border-radius: 50%;
     background-color: var(--white--60);
     z-index: -1;
-    animation: izqDer_entra .7s .2s ease-out both;
+    animation: izqDer_entra .7s .5s ease-out both;
 }
 section.cartelera .publicidad div.izquierda h1::after{
     content: '';
@@ -58,7 +59,7 @@ section.cartelera .publicidad div.izquierda h1::after{
     border-radius: 50%;
     background-color: var(--white--60);
     z-index: -1;
-    animation: izqDer_entra2 .7s .5s ease-out both;
+    animation: izqDer_entra2 .7s .2s ease-out both;
 }
 section.cartelera .publicidad div.izquierda p{
     font-size: 1.5rem;
@@ -101,9 +102,18 @@ section.cartelera .publicidad picture.img{
     border-radius: 50%;
     animation: derIzq_entra .3s .4s ease-out both;
 }
-section.cartelera .publicidad picture.img img{
-    width: 100%;
+section.cartelera .publicidad picture.img2{
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: rotateX(30deg);
     border-radius: 50%;
+    animation: izqDer_entra .3s .4s ease-out both;
+}
+section.cartelera .publicidad picture.img img,
+section.cartelera .publicidad picture.img2 img{
+    width: 100%;
 }
 section.categorias{
     width: 90%;
