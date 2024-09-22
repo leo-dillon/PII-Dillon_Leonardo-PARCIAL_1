@@ -102,7 +102,7 @@
             }
             return $imagen;
         }
-        public static function traerCategorias(): array{
+        public static function traerCategoriasImagen(): array{
             $categorias = [];
             $respuesta = [];
             $JOSN = file_get_contents("./json/productos.json");
@@ -118,6 +118,46 @@
                 }
             }
             return $respuesta;
+        }
+        public static function traerCategorias() : array {
+            $categorias = [];
+            $JOSN = file_get_contents("./json/productos.json");
+            $JSONData = json_decode($JOSN);
+            foreach ($JSONData as $producto) {
+                $categoriaActual = $producto -> category; 
+                if(!in_array( $categoriaActual, $categorias)){
+                    $categorias[] = $producto -> category;
+                };
+            }
+            return $categorias;
+        }
+        public static function traerTags() : array {
+            $tags = [];
+            $JOSN = file_get_contents("./json/productos.json");
+            $JSONData = json_decode($JOSN);
+            foreach ($JSONData as $producto) {
+                foreach ($producto -> tags as $a) {
+                    $tagActual = $a; 
+                    if(!in_array( $tagActual, $tags)){
+                        $tags[] = $a;
+                    };
+                }
+            }
+            return $tags;
+        }
+        public static function traerBrand() : array {
+            $brands = [];
+            $JOSN = file_get_contents("./json/productos.json");
+            $JSONData = json_decode($JOSN);
+            foreach ($JSONData as $producto) {
+                if( isset($producto -> brand) ){
+                    $brandActual = $producto -> brand; 
+                    if(!in_array( $brandActual, $brands)){
+                        $brands[] = $producto -> brand;
+                    };
+                }
+            }
+            return $brands;
         }
     }
 ?>

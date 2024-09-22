@@ -1,10 +1,7 @@
 <?php
     require_once './clases/Productos.php';
     $imagen = Productos::trearImagenRandom();
-    $categorias = Productos::traerCategorias();
-    // echo "<pre>";
-    // var_dump($imagen);
-    // echo "</pre>";
+    $categorias = Productos::traerCategoriasImagen();
 ?>
 <section class="cartelera">
     <div class="publicidad">
@@ -25,7 +22,7 @@
     <h2>Categorías</h2>
     <div>
         <?php foreach ($categorias as $categoria){ ?>
-            <a href="?sec=productos&cat=<?=$categoria -> getCategory()?>">
+            <a href="?sec=tienda&cat=<?=$categoria -> getCategory()?>">
                 <?= $categoria -> getCategory() ?>
                 <img src="<?= $categoria -> getThumbnail() ?>" alt="imagen de categoría <?= $categoria -> getCategory() ?>">
             </a>

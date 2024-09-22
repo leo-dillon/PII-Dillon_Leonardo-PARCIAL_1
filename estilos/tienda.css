@@ -1,0 +1,77 @@
+main{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+}
+main form{
+    width: 100%;
+    max-width: 280px;
+    padding: 24px;
+    background-color: var(--lumber--80);
+    box-shadow: 0 0 12px var(--dark--100);
+}
+main form h2{
+    font-weight: 500;
+}
+main form div{
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 0.5px solid var(--dark--50);
+}
+
+main form select{
+    width: 100%;
+    padding: 0 6px;
+    background-color: var(--white--90);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: box-shadow .3s ease-out;
+    box-shadow: 0 2px 2px var(--dark--100);
+}
+main form select:hover,
+main form div input[type='submit']:hover{
+    box-shadow: 3px 3px 6px var(--dark--100);
+}
+main form select option{
+    font-size: 0.8rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+main form select option::first-letter{
+    text-transform: uppercase;
+}
+main form div input[type='submit']{
+    width: 100%;
+    padding:6px;
+    background-color: var(--white--90);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: box-shadow .3s ease-out;
+    box-shadow: 0 2px 2px var(--dark--100);
+}
+main form div.price{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+main section{
+    width: 100%;
+}
+main section h1{
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid var(--dark--50);
+    font-size: 2.5rem;
+    font-weight: 600     ;
+}
+main section>div{
+    padding: 16px 0;
+}

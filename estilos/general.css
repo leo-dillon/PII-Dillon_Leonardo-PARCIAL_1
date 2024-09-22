@@ -9,13 +9,19 @@
     --dark--5: rgba(14, 14, 14, 5%);
 
     --white--100: rgba(241, 241, 241, 100%);
+    --white--90: rgba(241, 241, 241, 90%);
     --white--60: rgba(241, 241, 241, 60%);
     --white--20: rgba(241, 241, 241, 20%);
     --white--10: rgba(241, 241, 241, 10%);
 
     --skyblue--100: rgb(26, 217, 255);
+
+    --orange--100: rgb(255, 199, 94, 100%);
+
     --lumber--100: rgb(255, 200, 180);
     --lumber--80: rgb(255, 223, 211, 80%);
+    --lumber--50: rgb(255, 223, 211, 50%);
+    --lumber--30: rgb(255, 223, 211, 30%);
     
 }
 *{
@@ -31,6 +37,9 @@
 a, h2{
     font-size: 1.3rem;
 }
+p.small{
+    font-size: .7rem;
+}
 body{
     height: 100%;
     min-height: 100vh;
@@ -40,7 +49,7 @@ body{
     background-color: var(--dark--5);
 }
 header{
-    background-color: var(--dark--10);
+    background-color: var(--orange--100);
     padding: 0 24px;
 }
 header>div{
@@ -82,6 +91,73 @@ header div nav a:hover{
 }
 main{
     overflow: hidden;
+}
+main section.productos{
+    padding: 64px 0;
+}
+main section.productos>div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+div.producto{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px var(--dark--40);    
+}
+div.producto picture{
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+div.producto picture img{
+    width: 100%;
+}
+div.producto div.info{
+    padding: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+div.producto div.info h3{
+    border-top: 1px solid var(--dark--40);
+    font-size: 1.2rem;
+}
+div.producto div.info p.price{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+div.producto div.info p.text{
+    width: 60%;
+    text-wrap: pretty;
+}
+div.producto div.info button {
+    padding: 3px 12px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    opacity: 0;
+    border-radius: 12px;
+    border: 0;
+    background-color: var(--white--100);
+    transform: translateY(-20px);
+    cursor: pointer;
+    transition: opacity .3s .3s ease-out, background-color .3s .3s ease-out, transform .3s .3s ease-out, scale .1s ease-out, box-shadow .3s ease-out;
+}
+div.producto div.info button:hover{
+    scale: 1.1;
+    box-shadow: 3px 3px 6px var(--dark--100);
+    transition: scale .1s ease-out, box-shadow .3s ease-out;
+}
+div.producto:hover div.info button {
+    background-color: var(--skyblue--100);
+    transform: translateY(0px);
+    opacity: 1;
+    transition: opacity .3s ease-out, background-color .3s ease-out, transform .3s ease-out
+
 }
 footer{
     padding: 32px 0;
