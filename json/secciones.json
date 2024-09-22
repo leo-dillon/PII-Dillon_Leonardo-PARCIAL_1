@@ -18,10 +18,16 @@
         "visible": true
     },
     {
+        "seccion": "alumno",
+        "texto": "Alumno",
+        "titulo": "Alumno",
+        "visible": true
+    },
+    {
         "seccion": "carrito",
         "texto": "Carrito",
         "titulo": "Carrito",
-        "visible": true
+        "visible": false
     },
     {
         "seccion": "404",

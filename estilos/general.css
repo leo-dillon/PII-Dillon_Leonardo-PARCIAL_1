@@ -98,27 +98,45 @@ main section.productos{
 main section.productos>div{
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 24px 12px;
 }
 div.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     max-width: 250px;
+    position: relative;
     border-radius: 6px;
     box-shadow: 0 0 4px var(--dark--40);    
+}
+div.producto p.rating{
+    padding: 3px 6px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: var(--white--100);
 }
 div.producto picture{
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
+    cursor: pointer;
 }
 div.producto picture img{
     width: 100%;
+    transition: filter .3s ease-out;
+}
+div.producto picture:hover img{
+    filter: drop-shadow(6px 4px 12px var(--dark--100));
 }
 div.producto div.info{
+    height: 100%;
     padding: 6px;
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 6px;
 }
 div.producto div.info h3{
@@ -135,7 +153,7 @@ div.producto div.info p.text{
     text-wrap: pretty;
 }
 div.producto div.info button {
-    padding: 3px 12px;
+    padding: 3px 6px;
     position: absolute;
     bottom: 8px;
     right: 8px;
@@ -143,6 +161,7 @@ div.producto div.info button {
     border-radius: 12px;
     border: 0;
     background-color: var(--white--100);
+    font-size: 1rem;
     transform: translateY(-20px);
     cursor: pointer;
     transition: opacity .3s .3s ease-out, background-color .3s .3s ease-out, transform .3s .3s ease-out, scale .1s ease-out, box-shadow .3s ease-out;

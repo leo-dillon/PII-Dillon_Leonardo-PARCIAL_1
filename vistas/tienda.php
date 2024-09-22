@@ -1,6 +1,35 @@
 <?php 
     require_once './clases/Funciones.php'; 
     require_once './clases/Productos.php'; 
+    $productos = Productos::traerProductos();
+    if(isset($_GET['cat']) && $_GET['cat'] != ''){
+        $productos = array_filter($productos, function($pro){
+            return $_GET['cat'] == $pro -> getCategory() ;
+        });
+    }
+    if(isset($_GET['rat']) && $_GET['rat'] != ''){
+        $productos = array_filter($productos, function($pro){
+            return $_GET['rat'] < $pro -> getRating() ;
+        });
+    }
+    if(isset($_GET['tag']) && $_GET['tag'] != ''){
+        $productos = array_filter($productos, function($pro){
+            $tags = $pro -> getTags();
+            if(in_array($_GET['tag'], $tags)){
+                return $pro;
+            };
+        });
+    }
+    if(isset($_GET['mar']) && $_GET['mar'] != ''){
+        $productos = array_filter($productos, function($pro){
+            return $_GET['mar'] == $pro -> getBrand() ;
+        });
+    }
+    if(isset($_GET['pri']) && $_GET['pri'] != ''){
+        $productos = array_filter($productos, function($pro){
+            return $_GET['pri'] < $pro -> getPrice() ;
+        });
+    }
     $categorias = Productos::traerCategorias();
     $formCategorias = Funciones::generarSelect('Categoria', 'cat', $categorias);
     $tags = Productos::traerTags();
@@ -9,7 +38,6 @@
     $formBrands = Funciones::generarSelect('Marcas', 'mar', $brands);
     $formRating = Funciones::generarSelect('Calificación', 'rat', [1,2,3,4,5]);
     
-    // Funciones::mostrar( $brands );
 ?>
 
 <form action="" method="GET">
@@ -21,8 +49,8 @@
     <?= $formBrands ?>
     <div class="price">
         <label for="pri">Precio minimo </label>
-        <p class="small">$ 10</p>
-        <input class="inputPrecio" type="range" name="pri" min="10" max="100" value="10">
+        <p class="small">$ 0</p>
+        <input class="inputPrecio" type="range" name="pri" min="0" max="1000" value="0">
     </div>
     <div>
         <input type="submit" value="Enviar">
@@ -30,111 +58,17 @@
 </form>
 <section class="productos">
     <h1>Tienda oficial</h1>
-    <p class="small">30 productos</p>
+    <p class="small"><?= count($productos) ?> productos</p>
     <div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-
-
-        <div class="producto">
-            <picture>
-                <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="">
-            </picture>
-            <div class="info">
-                <h3>Nombre del producto</h3>
-                <p class="price">$ 12</p>
-                <p class="text">Hasta 12 cuotas <strong>sin interes</strong></p>
-                <button>Agregar</button>
-            </div>
-        </div>
-        
+        <?php
+            if(count($productos) == 0){
+                echo '<h2>No se econtraron resultados</h2>';
+            }else{
+                foreach ($productos as $pro) {
+                    echo Funciones::generarProducto($pro -> getThumbnail(), $pro -> getTitle(), $pro -> getPrice(), $pro -> getRating(), $pro -> getID() );
+                }
+            }
+        ?>
     </div>
 </section>
 <script src="./js/productos.js"></script>

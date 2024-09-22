@@ -16,6 +16,9 @@
         private $images;
         private $thumbnail;
 
+        public function getID(){
+            return $this->id;
+        }
         public function getTitle() {
             return $this->title;
         }
@@ -67,21 +70,23 @@
             $gondola = [];
             $JOSN = file_get_contents("./json/productos.json");
             $JSONData = json_decode($JOSN);
-            foreach ($JSONData as $producto) {
+            foreach ($JSONData as $pro) {
                 $producto = new self();
-                $producto -> discountPercentage = $producto -> discountPercentage; 
-                $producto -> description = $producto -> description; 
-                $producto -> thumbnail = $producto -> thumbnail; 
-                $producto -> category = $producto -> category; 
-                $producto -> reviews = $producto -> reviews; 
-                $producto -> rating = $producto -> rating; 
-                $producto -> images = $producto -> images; 
-                $producto -> title = $producto -> title; 
-                $producto -> price = $producto -> price; 
-                $producto -> stock = $producto -> stock; 
-                $producto -> brand = $producto -> brand; 
-                $producto -> tags = $producto -> tags; 
-                $producto -> id = $producto -> id; 
+                $producto -> discountPercentage = $pro -> discountPercentage; 
+                $producto -> description = $pro -> description; 
+                $producto -> thumbnail = $pro -> thumbnail; 
+                $producto -> category = $pro -> category; 
+                $producto -> reviews = $pro -> reviews; 
+                $producto -> rating = $pro -> rating; 
+                $producto -> images = $pro -> images; 
+                $producto -> title = $pro -> title; 
+                $producto -> price = $pro -> price; 
+                $producto -> stock = $pro -> stock;
+                if(isset($pro -> brand)){
+                    $producto -> brand = $pro -> brand; 
+                }
+                $producto -> tags = $pro -> tags; 
+                $producto -> id = $pro -> id; 
                 $gondola[] = $producto;
             }
             return $gondola;
