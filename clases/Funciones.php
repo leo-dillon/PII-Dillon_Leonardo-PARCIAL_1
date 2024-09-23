@@ -32,11 +32,10 @@
                 $color = 'color: red';
             }
             $producto = "<div class='producto'>";
-            $producto .= "<a href='#'><picture>";
+            $producto .= "<a href='?sec=producto&id={$id}'><picture>";
             $producto .= "<img src='{$img}' alt='{$title}'>";
             $producto .= "</picture></a>";
             $producto .= "<div class='info'>";
-            $producto .= "<p class='id' style='display:none'>{$id}</p>";
             $producto .= "<h3>{$title}</h3>";
             $producto .= "<p class='price'>$ {$price}</p>";
             $producto .= "<p class='text'>Hasta {$cuotas} cuotas <strong>sin interes</strong></p>";

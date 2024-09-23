@@ -30,6 +30,12 @@
         "visible": false
     },
     {
+        "seccion": "producto",
+        "texto": "Producto",
+        "titulo": "Producto",
+        "visible": false
+    },
+    {
         "seccion": "404",
         "texto": "404",
         "titulo": "404",

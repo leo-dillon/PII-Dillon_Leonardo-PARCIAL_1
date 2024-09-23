@@ -91,6 +91,32 @@
             }
             return $gondola;
         }
+        public static function traerProductoID($id): object {
+            $productoElegido;
+            $JOSN = file_get_contents("./json/productos.json");
+            $JSONData = json_decode($JOSN);
+            foreach ($JSONData as $producto) {
+                if($producto -> id == $id){
+                    $productoElegido = new self();
+                    $productoElegido -> discountPercentage = $producto -> discountPercentage; 
+                    $productoElegido -> description = $producto -> description; 
+                    $productoElegido -> thumbnail = $producto -> thumbnail; 
+                    $productoElegido -> category = $producto -> category; 
+                    if(isset($producto -> brand)){
+                        $productoElegido -> brand = $producto -> brand; 
+                    }
+                    $productoElegido -> reviews = $producto -> reviews; 
+                    $productoElegido -> rating = $producto -> rating; 
+                    $productoElegido -> images = $producto -> images; 
+                    $productoElegido -> title = $producto -> title; 
+                    $productoElegido -> price = $producto -> price; 
+                    $productoElegido -> stock = $producto -> stock;
+                    $productoElegido -> tags = $producto -> tags; 
+                    $productoElegido -> id = $producto -> id;
+                }
+            }
+            return $productoElegido;
+        }
         public static function trearImagenRandom(): string {
             $imagen = '';
             $JOSN = file_get_contents("./json/productos.json");
