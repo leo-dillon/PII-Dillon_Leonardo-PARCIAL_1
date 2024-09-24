@@ -1,8 +1,13 @@
 -------- PREGUNTAS --------
 
 -------- Tareas --------
-Carrito de compras
+Carrito de compras                          | 
 LocalHost
 Producto individual
 Contacto
 Alumno
+Editar minimo de preoductos                 | Completado
+Error con producto y id no encontrado       | No Completados
+
+
+Infinity Free

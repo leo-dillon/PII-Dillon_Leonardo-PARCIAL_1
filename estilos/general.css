@@ -40,13 +40,59 @@ a, h2{
 p.small{
     font-size: .7rem;
 }
+.btn1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px var(--dark--40); 
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow .1s ease-out, scale .1s ease-out;
+}
+.btn1:hover{
+    box-shadow: 0 0 24px var(--dark--100);
+    scale: 1.05;
+}
+.btn2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 24px;
+    background-color: var(--white--100);
+    box-shadow: 0 ; 
+    font-weight: 600;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: box-shadow .1s ease-out, scale .1s ease-out;
+}
+.btn2:hover{
+    box-shadow: 0 0 24px var(--white--100);
+    scale: 1.05;
+}
+.btn3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 16px;
+    background-color: var(--white--100);
+    cursor: pointer;
+}
+.btn3:hover{
+    font-weight: 600;
+    background-color: var(--skyblue--100);
+}
 body{
     height: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--dark--5);
+    background-color: var(--dark--10);
 }
 header{
     background-color: var(--orange--100);
@@ -106,8 +152,10 @@ div.producto{
     justify-content: space-between;
     width: 100%;
     max-width: 250px;
+    padding: 6px;
     position: relative;
     border-radius: 6px;
+    background-color: var(--white--100);
     box-shadow: 0 0 4px var(--dark--40);    
 }
 div.producto p.rating{
@@ -132,7 +180,6 @@ div.producto picture:hover img{
 }
 div.producto div.info{
     height: 100%;
-    padding: 6px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -151,32 +198,6 @@ div.producto div.info p.price{
 div.producto div.info p.text{
     width: 60%;
     text-wrap: pretty;
-}
-div.producto div.info button {
-    padding: 3px 6px;
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    opacity: 0;
-    border-radius: 12px;
-    border: 0;
-    background-color: var(--white--100);
-    font-size: 1rem;
-    transform: translateY(-20px);
-    cursor: pointer;
-    transition: opacity .3s .3s ease-out, background-color .3s .3s ease-out, transform .3s .3s ease-out, scale .1s ease-out, box-shadow .3s ease-out;
-}
-div.producto div.info button:hover{
-    scale: 1.1;
-    box-shadow: 3px 3px 6px var(--dark--100);
-    transition: scale .1s ease-out, box-shadow .3s ease-out;
-}
-div.producto:hover div.info button {
-    background-color: var(--skyblue--100);
-    transform: translateY(0px);
-    opacity: 1;
-    transition: opacity .3s ease-out, background-color .3s ease-out, transform .3s ease-out
-
 }
 footer{
     padding: 32px 0;

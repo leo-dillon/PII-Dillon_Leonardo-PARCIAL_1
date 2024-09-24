@@ -11,7 +11,7 @@
         </div>
         <div class="derecha">
             <h2>12 Cuotas sin interés</h2>
-            <a href="?sec=productos">Comprar</a>    
+            <a class="btn2" href="?sec=productos">Comprar</a>    
         </div>
         <picture class="img">
             <img src="<?= $imagen ?>" alt="">
@@ -22,7 +22,7 @@
     <h2>Categorías</h2>
     <div>
         <?php foreach ($categorias as $categoria){ ?>
-            <a href="?sec=tienda&cat=<?=$categoria -> getCategory()?>">
+            <a class="btn1" href="?sec=tienda&cat=<?=$categoria -> getCategory()?>">
                 <?= $categoria -> getCategory() ?>
                 <img src="<?= $categoria -> getThumbnail() ?>" alt="imagen de categoría <?= $categoria -> getCategory() ?>">
             </a>

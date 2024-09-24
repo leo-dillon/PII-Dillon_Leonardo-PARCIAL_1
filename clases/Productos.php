@@ -91,8 +91,8 @@
             }
             return $gondola;
         }
-        public static function traerProductoID($id): object {
-            $productoElegido;
+        public static function traerProductoID($id): ?object {
+            $productoElegido = null;
             $JOSN = file_get_contents("./json/productos.json");
             $JSONData = json_decode($JOSN);
             foreach ($JSONData as $producto) {
@@ -114,6 +114,9 @@
                     $productoElegido -> tags = $producto -> tags; 
                     $productoElegido -> id = $producto -> id;
                 }
+            }
+            if( $productoElegido == null){
+                return null;
             }
             return $productoElegido;
         }

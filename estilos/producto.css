@@ -6,21 +6,37 @@ section{
 section>div{
     width: 80%;
     margin: 0 auto;
+    padding: 12px 24px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch ;
+    background-color: var(--white--100);
+    box-shadow: 0 0 4px var(--dark--40);    
+    border-radius: 12px;
 }
 section>div picture{
+    position: relative;
     width: 40%;
     margin-right: 10%;
-    border: 1px solid var(--dark--100);
+
+}
+section>div picture span{
+    position: absolute;
+    padding: 4px 6px;
+    top: 12px;
+    right: 12px;
+    border: 1px solid var(--dark--10);
 }
 section>div picture img{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
+
 section>div div.info{
+    padding: 42px 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 12px;
 }
 section>div div.info h1{
@@ -30,7 +46,7 @@ section>div div.info div.cantidad{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 42px;
 }
 section>div div.info div.cantidad div{
     display: flex;
@@ -38,9 +54,26 @@ section>div div.info div.cantidad div{
     gap: 16px;
 
 }
-section>div div.info div.cantidad button{
-    padding: 0px 4px;
+section>div div.info div.cantidad div *{
+    font-weight: bold;
 }
-section>div div.info div.cantidad button.carrito{
-    align-self: flex-end;
+section>div div.info div.cantidad div button{
+    padding: 0 4px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+}
+.error{
+    width: 100%;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px 24px;
+}
+.error h1{
+    font-size: 2rem;
+}
+.error a{
+    color: blue;
 }

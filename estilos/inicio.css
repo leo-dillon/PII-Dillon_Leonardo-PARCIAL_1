@@ -78,16 +78,6 @@ section.cartelera .publicidad div.derecha h2{
     color: var(--dark--80);
 }
 section.cartelera .publicidad div.derecha a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 16px;
-    border-radius: 24px;
-    background-color: var(--white--100);
-    box-shadow: 0 ; 
-    font-weight: 600;
-    font-size: 2rem;
-    transition: box-shadow .1s ease-out, scale .1s ease-out;
 }
 section.cartelera .publicidad div.derecha a:hover{
     box-shadow: 0 0 24px var(--white--100);
@@ -131,27 +121,11 @@ section.categorias div{
     border-bottom: 2px solid var(--dark--10);
     justify-content: space-around;
 }
-section.categorias div a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-transform: uppercase;
-    padding: 6px 12px;
-    border-radius: 12px;
-    box-shadow: 0 0 12px var(--dark--40); 
-    font-weight: 600;
-    transition: box-shadow .1s ease-out, scale .1s ease-out;
-}
 section.categorias div a:nth-child(odd){
     background-color: var(--lumber--100);
 }
 section.categorias div a:nth-child(even){
     background-color: var(--skyblue--100);
-}
-section.categorias div a:hover{
-    box-shadow: 0 0 24px var(--dark--100);
-    scale: 1.05;
 }
 section.categorias div a img{
     width: 42px;

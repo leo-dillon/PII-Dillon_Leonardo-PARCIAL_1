@@ -71,4 +71,4 @@
         ?>
     </div>
 </section>
-<script src="./js/productos.js"></script>
+<script src="./js/tienda.js"></script>
