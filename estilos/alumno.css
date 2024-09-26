@@ -1,0 +1,88 @@
+section{
+    width: 100%;
+    max-width: 1300px;
+    margin: 32px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section div.leo{
+    padding-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-radius: 24px;
+    border: 1px solid var(--dark--80);
+}
+section div.leo h1{
+    font-size: 1.5rem;
+}
+section div.leo p{
+    width: 100%;
+    display: flex;
+    gap: 32px;
+}
+section div.leo>div{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+section div.leo picture{
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    align-items: end;
+    background-color: var(--dark--80);
+    border: 6px solid brown;
+    outline: 2px solid var(--dark--80);
+}
+section div.leo picture img{
+    width: 100%;
+}
+section div.redes{
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around   ;
+    gap: 16px;
+    border-top: 1px solid var(--dark--80);
+    border-bottom: 1px solid var(--dark--80);
+}
+section div.redes a{
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: .9rem;
+    border-radius: 32px;    
+    filter: drop-shadow(0 0 12px var(--dark--80));
+    transition: background-color .2s ease-out;
+}
+section div.redes a img{
+    width: 32px;
+    height: 32px;
+}
+section div.redes a:hover{
+    background-color: var(--dark--80);
+    outline: 1px solid var(--dark--80);
+}
+@media (max-width: 600px){
+    section div.leo{
+        width: 90%;
+        padding: 12px;
+        padding-bottom: 72px;
+        position: relative;
+        flex-direction: column;
+    }
+    section div.leo h2{
+        max-width: 90%;
+    }
+    section div.leo div.redes{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0 ;
+        border-bottom: none;
+    }
+}

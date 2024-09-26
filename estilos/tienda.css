@@ -78,3 +78,49 @@ main section h1{
 main section>div{
     padding: 16px 0;
 }
+@media (max-width: 800px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    main form{
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 0        ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    main form h2{
+        width: 100%;
+    }
+    main form div{
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+        gap: 2px;
+    }
+}
+@media (max-width: 600px){
+    main form div{
+        width: 90%;
+        margin: 0 auto;
+    }
+    main form div.price{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    main form div.price label,
+    main form div.price p{
+        width: max-content;
+        display: inline-block;
+        font-size: 1rem;
+    }
+    main form div input[type='range']{
+        width: 100%;
+    }
+}

@@ -1,0 +1,97 @@
+section{
+    width: 100%;
+    max-width: 1300px;
+    margin: 24px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section h2{
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+    text-wrap: balance;
+}
+section>div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+section form{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+section form h1{
+    width: 90%;
+    margin: 12px auto;
+    font-size: 1rem;
+    color: var(--dark--60);
+}
+section form div{
+    width: 90%;
+    margin: 12px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+section form div label{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+section form div input,
+section form div textarea{
+    width: 100%;
+    max-width: 400px;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: none;
+    z-index: 2;
+    box-shadow: 4px 4px 3px var(--dark--80);
+}
+section form div textarea{
+    resize: none;
+    max-height: 100px;
+}
+section form div input[type='submit']{
+    margin-top: 12px;
+    z-index: 1;
+}
+section div.sucursales{
+    width: 100%;
+    max-width: 250px;
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    opacity: .6;
+}
+section div.sucursales div{
+    padding: 16px 0;
+    position: relative;
+    top: 4px;
+    left: 4px; 
+    border-left: 1px solid var(--dark--80);
+}
+section div.sucursales div a,
+section div.sucursales div p{
+    font-size: 0.9rem;
+    text-wrap: pretty;
+    padding-left: 14px;
+}
+section div.sucursales div a:hover{
+    color: blue;
+}
+@media (max-width: 600px){
+    section h2{
+        text-align: center;
+    }
+    section>div{
+        flex-direction: column;
+        align-items: center;
+    }
+    section form{
+        max-width: 450px;
+    }
+}

@@ -6,8 +6,9 @@ LocalHost
 Producto individual
 Contacto
 Alumno
+404
 Editar minimo de preoductos                 | Completado
-Error con producto y id no encontrado       | No Completados
+Error con producto y id no encontrado       | Completados
 
 
 Infinity Free

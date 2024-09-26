@@ -71,6 +71,7 @@ section.cartelera .publicidad div.derecha{
 }
 section.cartelera .publicidad div.derecha h2{
     width: 50%;
+    min-width: 270px;
     font-size: 2.5rem;
     text-transform: uppercase;
     text-wrap: balance;
@@ -105,6 +106,55 @@ section.cartelera .publicidad picture.img img,
 section.cartelera .publicidad picture.img2 img{
     width: 100%;
 }
+
+section.presentacion{
+    width: 90%;
+    max-width: 1300px;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+section.presentacion>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+section.presentacion div div.text{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+section.presentacion div div h2{
+    border-bottom: 1px solid var(--dark--80);
+    margin-bottom: 16px;
+}
+section.presentacion div div p{
+    width: 90%;
+    position: relative;
+    left: 12px;
+    text-wrap: pretty;
+}
+section.presentacion div picture{
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+section.presentacion div picture img{
+    width: 100%;
+}
+section.presentacion div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
 section.categorias{
     width: 90%;
     max-width: 1300px;
@@ -117,16 +167,80 @@ section.categorias h2{
 section.categorias div{
     padding: 32px 0;
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     border-top: 2px solid var(--dark--10);
     border-bottom: 2px solid var(--dark--10);
     justify-content: space-around;
 }
-section.categorias div a:nth-child(odd){
-    background-color: var(--lumber--100);
-}
-section.categorias div a:nth-child(even){
-    background-color: var(--skyblue--100);
-}
 section.categorias div a img{
     width: 42px;
+}
+
+@media (max-width:1100px){
+    section.cartelera .publicidad{
+        height: 350px;
+    }
+    section.cartelera .publicidad div.izquierda h1{
+        font-size: 3rem;
+    }
+    section.cartelera .publicidad div.izquierda p{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+@media (max-width:900px){
+    section.cartelera .publicidad div.izquierda{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    section.cartelera .publicidad div.izquierda h1::after,
+    section.cartelera .publicidad div.izquierda h1::before{
+        display: none;
+    }
+    section.cartelera .publicidad picture.img{
+        width: 150px;
+        top: 60%;
+    }
+    section.cartelera .publicidad div.derecha{
+        width: 100%;
+    }
+    section.cartelera .publicidad div.derecha h2{
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 0  ;
+    }
+    section.cartelera .publicidad div.derecha a{
+        font-size: 1.2rem;
+    }
+    section.presentacion div picture{
+        max-width: 300px;
+    }
+}
+@media (max-width:700px){
+    section.cartelera{
+        padding: 32px 0;
+    }
+    section.cartelera .publicidad{
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        padding-bottom: 42px;
+    }
+    section.cartelera .publicidad picture.img{
+        width: 100px;
+        top: 80%;
+    }
+    section.presentacion div{
+        flex-direction: column;
+    }
+    section.presentacion div:nth-child(even){
+        flex-direction: column-reverse;
+    }   
+    @media (max-width:700px){
+        section.categorias div a{
+            width: 80%;
+        }
+    }
 }

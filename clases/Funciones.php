@@ -40,6 +40,19 @@
             $producto .= "</div>";
             return $producto;
         }
+        public static function generarComentario($calificacion, $nombre, $fecha, $email, $comentarioUser) : string {
+            $fechaSeparada = explode('T', $fecha);
+            $fechaCorregida = $fechaSeparada[0];
+            $comentario = "<div class='comentario'>";
+                $comentario .= "<span>Calificación: <strong>$calificacion</strong></span>";
+                $comentario .= "<h3>$nombre</h3>";
+                $comentario .= " <p class='destacado'>$fechaCorregida</p>";
+                $comentario .= " <p class='destacado'>$email</p>";
+                $comentario .= "<h4 >Comentario</h4>";
+                $comentario .= "<p class='text'>$comentarioUser</p>";
+            $comentario .= "</div>";
+            return $comentario;
+        }
         public static function colorRating($rating): string {
             if($rating > 4){
                 return 'color: green';
