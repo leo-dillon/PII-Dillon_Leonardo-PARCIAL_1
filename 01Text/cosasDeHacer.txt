@@ -1,14 +1,14 @@
 -------- PREGUNTAS --------
 
 -------- Tareas --------
-Carrito de compras                          | 
-LocalHost
-Producto individual
-Contacto
-Alumno
-404
+LocalHost                                   | Completado
+Producto individual                         | Completado
+Contacto                                    | Completado
+Alumno                                      | Completado
+404                                         | Completado
 Editar minimo de preoductos                 | Completado
-Error con producto y id no encontrado       | Completados
-
-
-Infinity Free
+Error con producto y id no encontrado       | Completado
+Modificar el boton de comprar Home          | Completado
+Mirar el tema de los H1,H2,H3               | 
+Carrito de compras                          | 
+Mirar Infinity Free                         |

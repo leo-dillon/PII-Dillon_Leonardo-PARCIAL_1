@@ -11,7 +11,7 @@
         </div>
         <div class="derecha">
             <h2>12 Cuotas sin interés</h2>
-            <a class="btn2" href="?sec=productos">Comprar</a>    
+            <a class="btn2" href="?sec=tienda">Comprar</a>    
         </div>
         <picture class="img">
             <img src="<?= $imagen ?>" alt="">
