@@ -40,7 +40,7 @@
         }
         public function getMarca_id(){
             $marca = Marca::get_x_id($this -> brand_id);
-            $nombre = $categoria->getMarca();
+            $nombre = $marca->getMarca();
             return $nombre;
         }
         public static function traerProductos(): array {

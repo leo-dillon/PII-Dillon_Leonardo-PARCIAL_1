@@ -13,7 +13,7 @@ class Categoria
     {
         return $this->categoria;
     }
-    public function todasCategorias():array
+    public static function todasCategorias():array
     {
         $conexion = (new Conexion())->getConexion();
         $query = "SELECT * FROM category";
@@ -61,7 +61,7 @@ class Categoria
     /**
      * Edita una instancia de marca
      */
-    public function edit($categoria)
+    public function edit(String $categoria)
     {
         $conexion = (new Conexion())->getConexion();
         $query = "UPDATE category SET category_name = :nombreCategoria
@@ -69,8 +69,8 @@ class Categoria
         // print_r($this->id_marca);
         $PDOStatement = $conexion->prepare($query);
         $PDOStatement->execute([
-                        "nombreCategoria"   => $categoria, 
-                        "id"            => $this-> category_id
+                        "nombreCategoria" => $categoria, 
+                        "id" => $this-> category_id
                         // "id"            => $id
                     ]);
     }

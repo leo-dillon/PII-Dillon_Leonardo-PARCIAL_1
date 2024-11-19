@@ -1,4 +1,5 @@
 <?php 
+    require_once './clases/Conexion.php';
     require_once './clases/Funciones.php';
     require_once './clases/Secciones.php';
     $seccionActual = Funciones::seccionActual();
@@ -6,6 +7,13 @@
     if(!in_array($seccionActual, $seccionesValidas)){
         $seccionActual = '404';
     }
+
+
+    require_once './clases/Categoria.php';
+
+    $asd = Categoria::get_x_id(6);
+    $asd->edit('Sal');
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,7 +34,9 @@
     ?>  
     <main>
         <?php 
-            require_once "./vistas/$seccionActual.php";
+           require_once "./vistas/$seccionActual.php";
+
+            // Funciones::mostrar($asd)
         ?>
     </main>
     <?php  

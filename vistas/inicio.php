@@ -1,7 +1,6 @@
 <?php
     require_once './clases/Productos.php';
-    $imagen = Productos::trearImagenRandom();
-    $categorias = Productos::traerCategoriasImagen();
+    
 ?>
 <section class="cartelera">
     <div class="publicidad">

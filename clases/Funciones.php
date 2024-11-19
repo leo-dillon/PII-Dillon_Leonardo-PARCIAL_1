@@ -63,7 +63,7 @@
         }
         public static function mostrar($a) : void {
             echo '<pre>';
-            var_dump($a);
+            echo print_r($a);
             echo '</pre>';
         }
     }
